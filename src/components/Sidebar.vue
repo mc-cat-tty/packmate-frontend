@@ -188,7 +188,7 @@ export default {
 				this.$store.commit('toggleHexdumpMode');
 			},
 			startPcap() {
-				this.$http.post('pcap/start')
+				this.$http.post('pcap/start', {filename: this.$store.state.pcapName})
 					.then(() => {
 						this.$store.commit('startPcap');
 					}).catch(e => {

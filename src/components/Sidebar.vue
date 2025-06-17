@@ -19,7 +19,7 @@
 					@click.stop.prevent="toggleHexdump">
 				<i :class="this.$store.state.hexdumpMode ? 'far fa-file-code' : 'fas fa-align-left'"/>
 			</button>
-			<button type="button" class="btn btn-sm btn-outline-warning ml-1" v-if="!this.$store.state.pcapStarted"
+			<button type="button" class="btn btn-sm btn-outline-warning ml-1"
 					title="Start pcap file processing"
 					@click.stop.prevent="startPcap">
 				<i class="fas fa-arrow-circle-down"/>

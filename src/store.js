@@ -16,6 +16,7 @@ export default new Vuex.Store({
 		displayFavoritesOnly: false,
 		pause: false,
 		pcapStarted: true,
+    pcapName: '',
 
 		hexdumpMode: false,
 
@@ -41,6 +42,7 @@ export default new Vuex.Store({
 		togglePause: (s, p) => s.pause = !s.pause,
 		// eslint-disable-next-line no-unused-vars
 		startPcap: (s, p) => s.pcapStarted = true,
+    setPcapName: (s, p) => s.pcapName = p,
 		// eslint-disable-next-line no-unused-vars
 		toggleHexdumpMode: (s, p) => s.hexdumpMode = !s.hexdumpMode,
 

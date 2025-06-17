@@ -27,6 +27,14 @@
 				label-for="settings-pageSize">
 			<b-form-input type="number" id="settings-pageSize" v-model.number="pageSize"/>
 		</b-form-group>
+    <b-form-group
+        label-cols-sm="4"
+        label-cols-lg="3"
+        label="Pcap Filename"
+        description="Pcap filename selected amongst files in pcaps/ folder"
+        label-for="pcap-name">
+      <b-form-input @keydown.native.enter="setPcapName" id="pcap-name" v-model="pcapName"/>
+    </b-form-group>
 	</b-modal>
 </template>
 
@@ -56,6 +64,14 @@
 				},
 				set(v) {
 					this.$store.commit('setPageSize', v);
+				},
+			},
+      pcapName: {
+				get() {
+					return this.$store.state.pcapName;
+				},
+				set(v) {
+					this.$store.commit('setPcapName', v);
 				},
 			},
 		},
